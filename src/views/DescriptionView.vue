@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>¿Qué es Start.com?</h1>
+    <h2>¿Qué es Start.com?</h2>
     <ComponentDescription tittleDescription="Se crea..."/>
   </div>
 </template>
@@ -18,5 +18,8 @@ export default {
 <style>
  .container{
    height: 550px;
+ }
+ h2{
+   font-size: 5px;
  }
 </style>

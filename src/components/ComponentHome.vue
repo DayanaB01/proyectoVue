@@ -56,8 +56,18 @@ export default {
   }
   h3{
    text-align: center;
+   color: black;
+   font-family: cursive;
+  }
+  h5{
+    color: black;
+    font-family: cursive;
   }
   .textHome{
    text-align: center;
+  }
+  p{
+    color:black;
+    font-size: 1rem;
   }
 </style>

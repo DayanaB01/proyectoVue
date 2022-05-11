@@ -36,4 +36,8 @@ export default {
 .navbar {
   background-color: burlywood;
 }
+h1{
+  color: black;
+  font-family: cursive;
+}
 </style>

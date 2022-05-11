@@ -15,7 +15,7 @@
    </div>
   </div>
   <div class="column-left">
-    <h1> {{ tittleDescription }} </h1>
+    <h2> {{ tittleDescription }} </h2>
     <p>
     ...una plataforma digital con el objetivo de <br>
     ayudarte a vender los productos artesanales que<br>
@@ -23,10 +23,12 @@
     Asi muchas personas de todo el mundo puedan ver <br>
     y comprar tu producto.<br>
     <br>
-    ¿Porque?...<br>
+    </p>
+    <h2>¿Porque?...</h2>
+    <p>
     Haciendo uso de la tecnologia se comercializan <br>
     los productos que caracterizan la cultura,<br>
-    costumbres de Colombia, beneficiando en gran <br>
+    diversidad de Colombia, beneficiando en gran <br>
     parte a los artesanos independientes, que no <br>
     tienen acceso a las tecnologia digitales ni<br>
     tienen los recursos para adquirir lugares en <br>
@@ -56,5 +58,14 @@ export default {
    width: 450px;
    height: 450px;
    float:left;
+}
+h2{
+  color: black;
+  font-size: 1rem;
+  font-family: cursive;
+}
+p{
+  color: black;
+  font-family: cursive;
 }
 </style>
