@@ -5,7 +5,7 @@
     debes llenar el formulario de registro.
   </p>
   <ComponentRegister :name="profile.name" :lastname="profile.lastname"
-     :email="profile.email" :password="profile.password" @getData="getData"/>
+  :email="profile.email" :password="profile.password" emits="getForm"/>
 </div>
 </template>
 
@@ -28,11 +28,11 @@ export default {
     }
   },
   methods: {
-    getData (informacion) {
-      this.profile.name = informacion.name
-      this.profile.lastname = informacion.lastname
-      this.profile.email = informacion.email
-      this.profile.password = informacion.password
+    getForm (form) {
+      this.profile.name = form.name
+      this.profile.lastname = form.lastname
+      this.profile.email = form.email
+      this.profile.password = form.password
     }
   }
 }
