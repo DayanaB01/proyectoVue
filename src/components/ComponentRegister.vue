@@ -20,7 +20,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Bienvenido {{ nameData }} a Start.com
+        Bienvenido {{ name }} a Start.com
       </div>
     </div>
   </div>
