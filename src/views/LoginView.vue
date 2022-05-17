@@ -5,7 +5,7 @@
     debes llenar el formulario de registro.
   </p>
   <ComponentRegister :name="profile.name" :lastname="profile.lastname"
-  :email="profile.email" :password="profile.password" getForm="getForm"/>
+  :email="profile.email" :password="profile.password" @getForm="getForm"/>
 </div>
 </template>
 

@@ -1,64 +1,115 @@
 <template>
-  <div class="column-inicio">
-    <h4>INICIAR SESIÓN</h4><br>
-    <form>
-     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@mail.com">
-     </div>
-     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="********">
-     </div>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModala">
-       Ingresar
-      </button>
-       <div class="modal fade" id="exampleModala" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-         <div class="modal-content">
-          <div class="modal-header">
-           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            Bienvenid@ a Start.com
-          </div>
-         </div>
+   <div class="column-inicio">
+      <h4>INICIAR SESIÓN</h4><br>
+      <form>
+        <div class="mb-3">
+          <label for="mail"
+             class="form-label">
+          Email address
+          </label>
+          <input type="email"
+             class="form-control"
+             id="mail"
+             aria-describedby="emailHelp"
+             placeholder="example@mail.com">
         </div>
-       </div>
-    </form>
-  </div>
+        <div class="mb-3">
+          <label for="pass"
+             class="form-label">
+          Password
+          </label>
+          <input type="password"
+             class="form-control"
+             id="pass"
+             placeholder="********"
+             maxlength="8">
+        </div>
+        <button type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#ingreso">
+        Ingresar
+        </button>
+          <div class="modal fade"
+            id="ingreso"
+            tabindex="-1"
+            aria-hidden="true"
+            v-if=" emailForm  === emailForm">
+          <div class="modal-dialog">
+           <div class="modal-content">
+             <div class="modal-header">
+              <button type="button"
+                   class="btn-close"
+                   data-bs-dismiss="modal"
+                   aria-label="Close">
+              </button>
+             </div>
+             <div class="modal-body">
+              Bienvenid@ a Start.com /// {{ name }}los div solos o clases con el mismo nombre
+             </div>
+           </div>
+          </div>
+          </div>
+      </form>
+   </div>
   <div class="column-register">
   <h4>REGISTRARSE</h4><br>
   <form>
-      <div class="col">
+      <div>
         <label class="form-label">Name</label>
-        <input type="text" class="form-control" placeholder="First name" aria-label="First name" v-model="nameForm">
+        <input type="text"
+               class="form-control"
+               placeholder="First name"
+               v-model="nameForm">
       </div><br>
-      <div class="col">
+      <div>
         <label class="form-label">Last Name</label>
-        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" v-model="lastnameForm">
+        <input type="text"
+               class="form-control"
+               placeholder="Last name"
+               v-model="lastnameForm">
       </div>
-      <div class="col">
+      <div>
         <label class="form-label">E-mail</label>
-        <input type="email" class="form-control" placeholder="example@mail.com" aria-describedby="emailHelp" v-model="emailForm">
+        <input type="email"
+               class="form-control"
+               placeholder="example@mail.com"
+               aria-describedby="emailHelp"
+               v-model="emailForm">
       </div>
-      <div class="col">
+      <div>
         <label class="form-label">Password</label>
-        <input type="password" class="form-control" placeholder="********" aria-label="password" v-model="passwordForm">
+        <input type="password"
+               class="form-control"
+               placeholder="********"
+               v-model="passwordForm">
       </div><br>
-      <button type="button" class="btn btn-primary" data-bs-target="#exampleModa" data-bs-toggle="modal">Guardar</button>
-      <div class="modal fade" id="exampleModa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-         <div class="modal-content">
-          <div class="modal-header">
-           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @click="ChangeInfo"></button>
+      <button type="button"
+              @click="ChangeInfo"
+              class="btn btn-primary"
+              data-bs-target="#register"
+              data-bs-toggle="modal">
+        Guardar
+      </button>
+      <div class="modal fade"
+           id="register"
+           tabindex="-1"
+           aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                </button>
+              </div>
+              <div class="modal-body">
+              {{ name }} {{ lastname }} ya estas registrad@ en Start.com
+              </div>
+            </div>
           </div>
-          <div class="modal-body">
-            {{ name }} {{ lastname }} ya estas registrad@ en Start.com
-          </div>
-         </div>
-        </div>
-       </div>
+      </div>
   </form>
   </div>
 </template>
@@ -76,16 +127,20 @@ export default {
   },
   props: {
     name: {
-      type: String
+      type: String,
+      require: true
     },
     lastname: {
-      type: String
+      type: String,
+      require: true
     },
     email: {
-      type: String
+      type: String,
+      require: true
     },
     password: {
-      type: String
+      type: String,
+      require: true
     }
   },
   methods: {
