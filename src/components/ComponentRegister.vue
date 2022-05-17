@@ -45,7 +45,7 @@
               </button>
              </div>
              <div class="modal-body">
-              Bienvenid@ a Start.com /// {{ name }}los div solos o clases con el mismo nombre
+              Bienvenid@ {{ name }} a Start.com
              </div>
            </div>
           </div>
