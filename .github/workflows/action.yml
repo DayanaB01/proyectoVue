@@ -12,5 +12,5 @@ jobs:
       uses: xRealNeon/VuePagesAction@1.0.1
       with:
         username: 'DayanaB01'
-        reponame: '/proyectoVue'
+        reponame: 'proyectoVue'
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
